@@ -9,6 +9,12 @@ import { contractAddress } from "../utils/contractAddr";
 import { toast } from "react-toastify";
 
 const NftUpdate = () => {
+  const [participants, setParticipants] = useState(0);
+  const [eNftName, setEnftName] = useState("");
+  const [eNftSymbol, setENftSymbol] = useState("");
+  const [image, setImage ] = useState('');
+
+
   const [id, setid] = useState(0);
   const [eventFee, setEventFee] = useState(0);
   const [noOfParticipants, setNoOfParticipants] = useState(0);
@@ -199,8 +205,7 @@ const NftUpdate = () => {
             
                 
             <form onSubmit={handleSubmit}>
-         
-
+              
               <label className="text-lg ">
                 Registration Id: <br />
               </label>
