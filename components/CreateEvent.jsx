@@ -52,8 +52,9 @@ const CreateEvent = () => {
       toast.success('Event successfully created');
     },
 
-    onError(error) {
+    onError:(error) => {
       toast.error("Encountered error: ", error);
+      console.log(error);
     },
   });
 
@@ -72,26 +73,26 @@ const CreateEvent = () => {
       ) {
         toast.error("all fields required");
       } else {
-        create();
+        create?.();
       }
   };
 
-  useEffect(() => {
-    if (isError) {
-      toast.error("Transaction error try again");
-    }
+  // useEffect(() => {
+  //   if (isError) {
+  //     toast.error("Transaction error try again");
+  //   }
 
-    if (isSuccess) {
-      setid(0);
-      setEventFee(0);
-      setNoOfParticipants(0);
-      setRegStartDateAndTime(true);
-      setRegDeadline(true);
-      setEventUri("");
-      setName("");
-      setSymbol("");
-    }
-  }, [isError, isSuccess]);
+  //   if (isSuccess) {
+  //     setid(0);
+  //     setEventFee(0);
+  //     setNoOfParticipants(0);
+  //     setRegStartDateAndTime(true);
+  //     setRegDeadline(true);
+  //     setEventUri("");
+  //     setName("");
+  //     setSymbol("");
+  //   }
+  // }, [isError, isSuccess]);
 
   return (
     <div className="flex justify-center items-center">
@@ -134,13 +135,14 @@ const CreateEvent = () => {
                 <br />
                 <input
                   className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
-                  type="datetimelocal"
+                  type="datetime-local"
                   placeholder="Enter registration start date and time"
                   onChange={(e) => {
                     const timeString = e.target.value;
                     const date = new Date(timeString);
                     const epochTime = Math.floor(date.getTime() / 1000);
                     setRegStartDateAndTime(epochTime);
+                    
                   }}
                 />
               </label>
@@ -151,7 +153,7 @@ const CreateEvent = () => {
                 <br />
                 <input
                   className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
-                  type="datetime local"
+                  type="datetime-local"
                   placeholder="Enter registration deadline"
                   onChange={(e) => {
                     const timeString = e.target.value;
