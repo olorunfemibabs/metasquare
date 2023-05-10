@@ -8,7 +8,7 @@ import ABI from "../utils/ABI/factoryAbi.json";
 import { contractAddress } from "../utils/contractAddr";
 import { toast } from "react-toastify";
 
-const CreateEvent = () => {
+const NftUpdate = () => {
   const [id, setid] = useState(0);
   const [eventFee, setEventFee] = useState(0);
   const [noOfParticipants, setNoOfParticipants] = useState(0);
@@ -34,6 +34,7 @@ const CreateEvent = () => {
     ],
   });
 
+
   const {
     data: createEventData,
     isLoading: createEventIsLoading,
@@ -57,13 +58,6 @@ const CreateEvent = () => {
     },
   });
 
-  useEffect(() => {
-    if (createEventData) {
-      onClick();
-      console.log(createEventData);
-    }
-  }, [createEventData]);
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -83,6 +77,12 @@ const CreateEvent = () => {
       }
   };
 
+  const handleNftCreation = (e) => {
+    e.preventDefault();
+
+
+  }
+
   useEffect(() => {
     if (isError) {
       toast.error("Transaction error try again");
@@ -101,50 +101,123 @@ const CreateEvent = () => {
   }, [isError, isSuccess]);
 
   return (
-    <div>
+    <div className="flex justify-center items-center">
 
-<form onSubmit={handleSubmit} className="">
-              <label className="text-lg ">
-                Registration Id: <br />
+<form onSubmit={handleNftCreation} className="">
+              <label>
+                Event NFT Name:
+                <br />
+                <input
+                  className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
+                  type="text"
+                  placeholder="Event NFT name"
+                  onChange={(e) => setName(e.target.value)}
+                />
               </label>
-              <input
-                className=""
-                type="number"
-                placeholder="Enter event Id"
-                onChange={(e) => setid(e.target.value)}
-              />
-
               <br />
+              <label>
+                Event NFT Symbol:
+                <br />
+                <input
+                  className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
+                  type="text"
+                  placeholder="Event NFt sympol"
+                  onChange={(e) => setSymbol(e.target.value)}
+                />
+              </label>
+              <br />
+
+              <label>
+                Event Description:
+                <br />
+                <textarea
+                  className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
+                  type="text"
+                  placeholder="Details of the event"
+                  onChange={(e) => setSymbol(e.target.value)}
+                />
+              </label>
+
               <label>Event Fee:</label>
               <br />
               <input
-                className=""
+                className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
                 type="number"
                 placeholder="Enter zero if event is free"
                 onChange={(e) => setEventFee(e.target.value * 1e18)}
               />
-
-              <br />
               <br />
               <label>
                 Number of Participants:
                 <br />
                 <input
-                  className=""
+                  className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
                   type="number"
                   placeholder="No of participants"
                   onChange={(e) => setNoOfParticipants(e.target.value)}
                 />
               </label>
 
+              <label>
+                NFT Name:
+                <br />
+                <input
+                  className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
+                  type="text"
+                  placeholder="Event NFT name"
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </label>
               <br />
+              <label>
+                NFt Symbol:
+                <br />
+                <input
+                  className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
+                  type="text"
+                  placeholder="Event NFt sympol"
+                  onChange={(e) => setSymbol(e.target.value)}
+                />
+              </label>
+              <br />
+              <label>
+                  Event image:
+                  <br />
+                  <input 
+                  className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
+                  type="file" 
+                  />
+              </label>
+              <button className="py-2 mt-4 w-full bg-blue-950 text-white font-semibold rounded-lg" type="submit">
+                {createEventIsLoading || createWaitIsLoading
+                  ? 'Uploading ...'
+                  : 'Upload Data'}
+              </button>
+            
+            </form>
+
+            
+                
+            <form onSubmit={handleSubmit}>
+         
+
+              <label className="text-lg ">
+                Registration Id: <br />
+              </label>
+              <input
+                className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
+                type="number"
+                placeholder="Enter event Id"
+                onChange={(e) => setid(e.target.value)}
+              />
 
               <br />
+
               <label>
                 Registration start date and time:
                 <br />
                 <input
-                  className=""
+                  className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
                   type="datetimelocal"
                   placeholder="Enter registration start date and time"
                   onChange={(e) => {
@@ -161,8 +234,8 @@ const CreateEvent = () => {
                 Registration deadline:
                 <br />
                 <input
-                  className=""
-                  type="datetimelocal"
+                  className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
+                  type="datetime local"
                   placeholder="Enter registration deadline"
                   onChange={(e) => {
                     const timeString = e.target.value;
@@ -172,47 +245,22 @@ const CreateEvent = () => {
                   }}
                 />
               </label>
-
               <br />
               <label>
                 Event Uri:
                 <br />
                 <input
-                  className=""
+                  className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
                   type="text"
                   placeholder="event NFT uri"
                   id="uri"
                   onChange={(e) => setEventUri(e.target.value)}
                 />
               </label>
-              <br />
+
               <br />
 
-              <label>
-                NFT Name:
-                <br />
-                <input
-                  className=""
-                  type="text"
-                  placeholder="Event NFT name"
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </label>
-              <br />
-              <br />
-              <label>
-                NFt Symbol:
-                <br />
-                <input
-                  className=""
-                  type="text"
-                  placeholder="Event NFt sympol"
-                  onChange={(e) => setSymbol(e.target.value)}
-                />
-              </label>
-              <br />
-
-              <button className="" type="submit">
+              <button className="py-2 mt-4 w-full bg-blue-950 text-white font-semibold rounded-lg" type="submit">
                 {createEventIsLoading || createWaitIsLoading
                   ? 'Creating event...'
                   : 'Create Event'}
@@ -224,4 +272,4 @@ const CreateEvent = () => {
 
 };
 
-export default CreateEvent;
+export default NftUpdate;
