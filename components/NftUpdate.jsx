@@ -7,12 +7,14 @@ import {
 import ABI from "../utils/ABI/factoryAbi.json";
 import { contractAddress } from "../contractAddr";
 import { toast } from "react-toastify";
+import main from '../components/upload.mjs';
 
 const NftUpdate = () => {
   const [participants, setParticipants] = useState(0);
   const [eNftName, setEnftName] = useState("");
   const [eNftSymbol, setENftSymbol] = useState("");
   const [image, setImage ] = useState('');
+  const [description, setDescription ] = useState('');
 
 
   const [id, setid] = useState(0);
@@ -83,10 +85,10 @@ const NftUpdate = () => {
       }
   };
 
-  const handleNftCreation = (e) => {
+  const handleNftCreation = async (e) => {
     e.preventDefault();
-
-
+    const result = await main(image, eNftName,description);
+    console.log(result);
   }
 
   useEffect(() => {
@@ -136,11 +138,11 @@ const NftUpdate = () => {
               <label>
                 Event Description:
                 <br />
-                <textarea
+                <textarea rows={5} cols={40}
                   className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
                   type="text"
                   placeholder="Details of the event"
-                  onChange={(e) => setSymbol(e.target.value)}
+                  onChange={(e) => setDescription(e.target.value)}
                 />
               </label>
 
@@ -192,6 +194,7 @@ const NftUpdate = () => {
                   <input 
                   className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
                   type="file" 
+                  onChange={(e) => setImage(e.target.files[0])}
                   />
               </label>
               <button className="py-2 mt-4 w-full bg-blue-950 text-white font-semibold rounded-lg" type="submit">
