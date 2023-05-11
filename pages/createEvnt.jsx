@@ -1,13 +1,13 @@
 import React from "react";
 import CreateEvent from "@/components/CreateEvent";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import NftUpdate from "@/components/NftUpdate";
 
 
 const CreateEvnt = () => {
     return (
         <div className="w-screen">
-            < CreateEvent />
+            {/* < CreateEvent /> */}
+            <NftUpdate />
         </div>
     )
 }

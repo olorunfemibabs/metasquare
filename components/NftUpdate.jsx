@@ -5,7 +5,7 @@ import {
   useWaitForTransaction,
 } from "wagmi";
 import ABI from "../utils/ABI/factoryAbi.json";
-import { contractAddress } from "../contractAddr";
+import { contractAddress } from "../utils/contractAddr";
 import { toast } from "react-toastify";
 import main from '../components/upload.mjs';
 
@@ -165,28 +165,7 @@ const NftUpdate = () => {
                   onChange={(e) => setNoOfParticipants(e.target.value)}
                 />
               </label>
-
-              <label>
-                NFT Name:
-                <br />
-                <input
-                  className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
-                  type="text"
-                  placeholder="Event NFT name"
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </label>
-              <br />
-              <label>
-                NFt Symbol:
-                <br />
-                <input
-                  className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
-                  type="text"
-                  placeholder="Event NFt sympol"
-                  onChange={(e) => setSymbol(e.target.value)}
-                />
-              </label>
+              
               <br />
               <label>
                   Event image:
@@ -206,7 +185,7 @@ const NftUpdate = () => {
             </form>
 
             
-                
+{/*                 
             <form onSubmit={handleSubmit}>
               
               <label className="text-lg ">
@@ -273,7 +252,7 @@ const NftUpdate = () => {
                   ? 'Creating event...'
                   : 'Create Event'}
               </button>
-            </form>
+            </form> */}
     </div>
   )
 
