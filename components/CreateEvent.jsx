@@ -87,7 +87,7 @@ const CreateEvent = () => {
 
     if (isSuccess) {
       setid(0);
-      setEventFee(0);
+      setEventFee('');
       setNoOfParticipants(0);
       setRegStartDateAndTime(true);
       setRegDeadline(true);
@@ -98,7 +98,7 @@ const CreateEvent = () => {
   }, [isError, isSuccess]);
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center w-full">
 
 <form onSubmit={handleSubmit} className="">
               <label className="text-lg ">

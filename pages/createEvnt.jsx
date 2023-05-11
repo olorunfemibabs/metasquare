@@ -6,9 +6,8 @@ import Footer from "@/components/Footer";
 
 const CreateEvnt = () => {
     return (
-        <div>
+        <div className="w-screen">
             < CreateEvent />
-            < Footer />
         </div>
     )
 }
