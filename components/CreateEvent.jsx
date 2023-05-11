@@ -13,7 +13,7 @@ import { ethers } from "ethers";
 
 const CreateEvent = () => {
   const [id, setid] = useState(0);
-  const [eventFee, setEventFee] = useState(0);
+  const [eventFee, setEventFee] = useState('');
   const [noOfParticipants, setNoOfParticipants] = useState(0);
   const [regStartDateAndTime, setRegStartDateAndTime] = useState(0);
   const [regDeadline, setRegDeadline] = useState(0);
@@ -116,9 +116,9 @@ const CreateEvent = () => {
               <br />
               <input
                 className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
-                type="number"
+                type="text"
                 placeholder="Enter zero if event is free"
-                onChange={(e) => setEventFee(BigInt((e.target.value) * 1e18).toString(10))}
+                onChange={(e) => setEventFee(parseFloat((e.target.value) * 1e18).toString(10))}
               />
               <br />
               <label>
