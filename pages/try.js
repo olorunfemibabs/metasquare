@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 
+import Image from "next/image";
+import tt from "Images/tt.png"
+
 import { useRouter } from "next/router";
 import Navbar from "@/components/Navbar";
 import {
@@ -9,6 +12,8 @@ import {
   useWaitForTransaction,
 } from "wagmi";
 
+
+
 import styling from "styles/Home.module.css";
 
 import ticket from "../utils/ticket.json";
@@ -17,7 +22,8 @@ const EventDeets = () => {
   const router = useRouter();
   const eventAddress = router.query.address?.toString();
 
-  const {} = useAccount();
+  const {address} = useAccount();
+  const c = "0x35064FAcBD34C7cf71C7726E7c9F23e4650eCA10"
 
   const {
     data: evtAdmin,
@@ -138,8 +144,10 @@ const EventDeets = () => {
       <div className={styling.regpage}>
         <div className={styling.formactions}>
           <div className={styling.evtcenter}>
-            <h1 className={styling.evt}>Event Name: {evtName}</h1>
-            <h1 className={styling.evt}>Organizer: {evtAdmin}</h1>
+          <Image className={styling.tt} src={tt} 
+                    alt="GFG logo imported from public directory" />
+            <h1 className={styling.evt}>Event Name: <span className="sp">Polygon Guild Lagos</span>{evtName}</h1>
+            <h1 className={styling.evt}>Organizer: <span className="sp">0x35064FAcBD34C7cf71C7726E7c9F23e4650eCA10</span>{evtAdmin}</h1>
 
             <div className={styling.poap}>
               <form onSubmit={handleSubmit}>
@@ -153,10 +161,15 @@ const EventDeets = () => {
               <form onSubmit={handleSubmit2}>
                 <button className={styling.getit} type="submit">
                   {claimIsLoading || claimIsLoadingWaitData
-                    ? "Claiming Attendance NFT..."
-                    : "Claim Attendance NFT"}
+                    ? "Claiming Poap..."
+                    : "Claim Poap"}
                 </button>
               </form>
+
+        
+              
+              
+              
             </div>
           </div>
         </div>
