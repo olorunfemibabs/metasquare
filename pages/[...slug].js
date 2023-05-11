@@ -9,6 +9,7 @@ import {
     useContractWrite,
     useWaitForTransaction,
   } from 'wagmi';
+  import styling from "../../styles/Home.module.css";
 
 import ticket from '../utils/ticket.json';
 
@@ -139,7 +140,7 @@ const EventDeets = () => {
     <div>
         <Navbar />
 
-        <div>
+        <div className={styling.container}>
             <div>
                 <h1>Event Name: {evtName}</h1>
                 <h1>Organizer: {evtAdmin}</h1>
