@@ -15,12 +15,12 @@ const NftUpdate = () => {
   const [eNftSymbol, setENftSymbol] = useState("");
   const [image, setImage ] = useState('');
   const [description, setDescription ] = useState('');
-
-
+  const [eventFee, setEventFee] = useState('');
+  
+  
   const [id, setid] = useState(0);
-  const [eventFee, setEventFee] = useState(0);
-  const [noOfParticipants, setNoOfParticipants] = useState(0);
   const [regStartDateAndTime, setRegStartDateAndTime] = useState(0);
+  const [noOfParticipants, setNoOfParticipants] = useState(0);
   const [regDeadline, setRegDeadline] = useState(0);
   const [eventUri, setEventUri] = useState("");
   const [name, setName] = useState("");
@@ -87,8 +87,11 @@ const NftUpdate = () => {
 
   const handleNftCreation = async (e) => {
     e.preventDefault();
-    const result = await main(image, eNftName,description);
+    const result = await main(image, eNftName,eNftSymbol, description, eventFee, participants);
     console.log(result);
+    if(result){
+      toast.success('Event details uploaded 100%...');
+    }
   }
 
   useEffect(() => {
@@ -119,7 +122,7 @@ const NftUpdate = () => {
                   className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
                   type="text"
                   placeholder="Event NFT name"
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={(e) => setEnftName(e.target.value)}
                 />
               </label>
               <br />
@@ -130,7 +133,7 @@ const NftUpdate = () => {
                   className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
                   type="text"
                   placeholder="Event NFt sympol"
-                  onChange={(e) => setSymbol(e.target.value)}
+                  onChange={(e) => setENftSymbol(e.target.value)}
                 />
               </label>
               <br />
@@ -150,9 +153,9 @@ const NftUpdate = () => {
               <br />
               <input
                 className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
-                type="number"
+                type="text"
                 placeholder="Enter zero if event is free"
-                onChange={(e) => setEventFee(e.target.value * 1e18)}
+                onChange={(e) => setEventFee(parseFloat((e.target.value) * 1e18).toString(10))}
               />
               <br />
               <label>
@@ -162,10 +165,10 @@ const NftUpdate = () => {
                   className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
                   type="number"
                   placeholder="No of participants"
-                  onChange={(e) => setNoOfParticipants(e.target.value)}
+                  onChange={(e) => setParticipants(e.target.value)}
                 />
               </label>
-              
+
               <br />
               <label>
                   Event image:
@@ -176,7 +179,7 @@ const NftUpdate = () => {
                   onChange={(e) => setImage(e.target.files[0])}
                   />
               </label>
-              <button className="py-2 mt-4 w-full bg-blue-950 text-white font-semibold rounded-lg" type="submit">
+              <button className="py-2 outline-none mt-4 w-full bg-blue-950 text-white font-semibold rounded-lg" type="submit">
                 {createEventIsLoading || createWaitIsLoading
                   ? 'Uploading ...'
                   : 'Upload Data'}
