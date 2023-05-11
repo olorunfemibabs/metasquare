@@ -167,7 +167,8 @@ const EventDeets = () => {
               </form>
 
         
-              
+              <>
+              </>
               
               
             </div>
