@@ -5,7 +5,7 @@ import {
   useWaitForTransaction,
 } from "wagmi";
 import ABI from "../utils/ABI/factoryAbi.json";
-import { contractAddress } from "../utils/contractAddr";
+import { contractAddress } from "../contractAddr";
 import { toast } from "react-toastify";
 
 const NftUpdate = () => {

@@ -1,3 +1,5 @@
+/* global BigInt */
+
 import React, { useEffect, useState } from "react";
 import {
   useContractWrite,
@@ -5,8 +7,9 @@ import {
   useWaitForTransaction,
 } from "wagmi";
 import ABI from "../utils/ABI/factoryAbi.json";
-import { contractAddress } from "../utils/contractAddr";
+import { contractAddress } from '../utils/contractAddr';
 import { toast } from "react-toastify";
+import { ethers } from "ethers";
 
 const CreateEvent = () => {
   const [id, setid] = useState(0);
@@ -19,7 +22,7 @@ const CreateEvent = () => {
   const [symbol, setSymbol] = useState("");
 
   const { config: config1 } = usePrepareContractWrite({
-    address: contractAddress,
+    address: '0xBE7256f69Bdcc1493c1092e7a90D471E055B5ADd',
     abi: ABI,
     functionName: "createEvent",
     args: [
@@ -46,7 +49,7 @@ const CreateEvent = () => {
     isError,
     isSuccess,
   } = useWaitForTransaction({
-    data: createEventData?.hash,
+    hash: createEventData?.hash,
 
     onSuccess: () => {
       toast.success('Event successfully created');
@@ -77,22 +80,22 @@ const CreateEvent = () => {
       }
   };
 
-  // useEffect(() => {
-  //   if (isError) {
-  //     toast.error("Transaction error try again");
-  //   }
+  useEffect(() => {
+    if (isError) {
+      toast.error("Transaction error try again");
+    }
 
-  //   if (isSuccess) {
-  //     setid(0);
-  //     setEventFee(0);
-  //     setNoOfParticipants(0);
-  //     setRegStartDateAndTime(true);
-  //     setRegDeadline(true);
-  //     setEventUri("");
-  //     setName("");
-  //     setSymbol("");
-  //   }
-  // }, [isError, isSuccess]);
+    if (isSuccess) {
+      setid(0);
+      setEventFee(0);
+      setNoOfParticipants(0);
+      setRegStartDateAndTime(true);
+      setRegDeadline(true);
+      setEventUri("");
+      setName("");
+      setSymbol("");
+    }
+  }, [isError, isSuccess]);
 
   return (
     <div className="flex justify-center items-center">
@@ -115,7 +118,7 @@ const CreateEvent = () => {
                 className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
                 type="number"
                 placeholder="Enter zero if event is free"
-                onChange={(e) => setEventFee(e.target.value * 1e18)}
+                onChange={(e) => setEventFee(BigInt((e.target.value) * 1e18).toString(10))}
               />
               <br />
               <label>
