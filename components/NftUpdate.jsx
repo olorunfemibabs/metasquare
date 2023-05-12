@@ -20,11 +20,11 @@ const NftUpdate = () => {
   
   const [id, setid] = useState(0);
   const [regStartDateAndTime, setRegStartDateAndTime] = useState(0);
-  const [noOfParticipants, setNoOfParticipants] = useState(0);
   const [regDeadline, setRegDeadline] = useState(0);
+  // const [noOfParticipants, setNoOfParticipants] = useState(0);
   const [eventUri, setEventUri] = useState("");
-  const [name, setName] = useState("");
-  const [symbol, setSymbol] = useState("");
+  // const [name, setName] = useState("");
+  // const [symbol, setSymbol] = useState("");
 
   const { config: config1 } = usePrepareContractWrite({
     address: contractAddress,
@@ -33,12 +33,12 @@ const NftUpdate = () => {
     args: [
       id,
       eventFee,
-      noOfParticipants,
+      participants,
       regStartDateAndTime,
       regDeadline,
       eventUri,
-      name,
-      symbol,
+      eNftName,
+      eNftSymbol,
     ],
   });
 
@@ -76,7 +76,7 @@ const NftUpdate = () => {
         regStartDateAndTime === "" ||
         regDeadline === "" ||
         eventUri === "" ||
-        name === "" ||
+        eventName === "" ||
         symbol === ""
       ) {
         toast.error("all fields required");
@@ -179,7 +179,7 @@ const NftUpdate = () => {
                   onChange={(e) => setImage(e.target.files[0])}
                   />
               </label>
-              <button className="py-2 outline-none mt-4 w-full bg-blue-950 text-white font-semibold rounded-lg" type="submit">
+              <button className="py-2 outline-none mt-4 w-full hover:bg-blue-900 bg-blue-950 text-white font-semibold rounded-lg" type="submit">
                 {createEventIsLoading || createWaitIsLoading
                   ? 'Uploading ...'
                   : 'Upload Data'}
