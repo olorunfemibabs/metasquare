@@ -2,6 +2,7 @@ import React from "react";
 import CreateEvent from "@/components/CreateEvent";
 import NftUpdate from "@/components/NftUpdate";
 import GetStarted from "@/components/GetStarted";
+import CreateId from "@/components/CreateId";
 
 const events = () => {
   return (
@@ -9,8 +10,9 @@ const events = () => {
     Events
 
     {/* <CreateEvent /> */}
-    <NftUpdate />
+    {/* <NftUpdate /> */}
     {/* <GetStarted /> */}
+    <CreateId />
   </div>
   
   )

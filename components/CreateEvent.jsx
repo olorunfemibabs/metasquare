@@ -7,7 +7,7 @@ import {
   useWaitForTransaction,
 } from "wagmi";
 import ABI from "../utils/ABI/factoryAbi.json";
-import { contractAddress } from '../utils/contractAddr';
+import contractAddress from '../utils/contractAddr';
 import { toast } from "react-toastify";
 import { ethers } from "ethers";
 
@@ -22,7 +22,7 @@ const CreateEvent = () => {
   const [symbol, setSymbol] = useState("");
 
   const { config: config1 } = usePrepareContractWrite({
-    address: '0xBE7256f69Bdcc1493c1092e7a90D471E055B5ADd',
+    address: contractAddress,
     abi: ABI,
     functionName: "createEvent",
     args: [

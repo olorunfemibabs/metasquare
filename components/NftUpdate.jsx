@@ -5,7 +5,7 @@ import {
   useWaitForTransaction,
 } from "wagmi";
 import ABI from "../utils/ABI/factoryAbi.json";
-import { contractAddress } from "../utils/contractAddr";
+import contractAddress from "../utils/contractAddr";
 import { toast } from "react-toastify";
 import main from '../components/upload.mjs';
 
@@ -55,7 +55,7 @@ const NftUpdate = () => {
     isError,
     isSuccess,
   } = useWaitForTransaction({
-    data: createEventData?.hash,
+    hash: createEventData?.hash,
 
     onSuccess: () => {
       toast.success('Event successfully created');
