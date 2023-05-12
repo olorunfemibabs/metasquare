@@ -10,9 +10,9 @@ const events = () => {
     Events
 
     {/* <CreateEvent /> */}
-    {/* <NftUpdate /> */}
+    <NftUpdate />
     {/* <GetStarted /> */}
-    <CreateId />
+    {/* <CreateId /> */}
   </div>
   
   )
