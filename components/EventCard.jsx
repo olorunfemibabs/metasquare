@@ -23,7 +23,7 @@ const EventCard = ({eventAddress}) => {
 
     const handleEventData = (data) => {
         setEventUri(`https://ipfs.io/ipfs/${data.eventUri}/metadata.json`);
-        fetchDetail(eventUri);
+        fetchDetail(`https://ipfs.io/ipfs/${data.eventUri}/metadata.json`);
         console.log(eventUri);
         setRegStartDateAndTime(convertEpochToReadableTime(Number(data.regStartDateAndTime)));
         setRegDeadline(convertEpochToReadableTime(Number(data.regDeadline)));
@@ -59,10 +59,10 @@ const EventCard = ({eventAddress}) => {
     return (
         <div className="flex justify-center items-center">
 
-        <Link href='hp.com'>
+        <Link href='hp.com' className="">
 
-            <div className="h-[250px] w-[400px] bg-blue-950 text-white rounded-lg">
-                <div className="ml-4 mt-6 mb-2 mr-2"><span className="font-semibold">Event title: </span>{detail.name}</div>
+            <div className="h-[220px] w-[380px] bg-blue-950 text-white rounded-lg flex flex-col justify-center items-start">
+                <div className="ml-4 mb-2 mr-2"><span className="font-semibold">Event title: </span>{detail.name}</div>
                 <div className="ml-4 mb-2 mr-2"><span className="font-semibold">Description: </span>{detail.description}</div>
                 <div className="ml-4 mr-2"><span className="font-semibold">Registration starts: </span> {regStartDateAndTime}</div>
                 <div className="ml-4 mr-2 mb-2"><span className="font-semibold">Registration deadline: </span> {regDeadline}</div>

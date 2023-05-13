@@ -11,7 +11,6 @@ const events = () => {
     abi: ABI,
     functionName: "showTotalEventAddresses",
     onSuccess(data){
-      // console.log(data);
       setEvents(data);
     }
   });
@@ -19,7 +18,7 @@ const events = () => {
   return (
     <div className="flex flex-row">
       Events
-      <div>
+      <div className="grid grid-cols-3 gap-[35px]">
         {events?.map((e, i) => {
           return (
             <div key={i}>
