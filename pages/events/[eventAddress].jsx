@@ -5,8 +5,8 @@ import { useRouter } from "next/router";
 
 const eventDetail = () => {
     const router = useRouter();
-    const { events } = router.query;
-    console.log(events);
+    const eventFlex = router.query.eventAddress;
+    console.log(eventFlex);
     
   return (
     <section className="flex md:flex-row flex-col sm:py-16 py-6">
