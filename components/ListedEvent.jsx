@@ -23,8 +23,8 @@ const ListedEvent = () => {
   return (
     <div className="w-full mb-10">
       <Carousel responsive={responsive}>
-        {event.map((item, i) => (
-          <EvCard key={i} item={item} />
+        {event.map((eventAddress, i) => (
+          <EvCard key={i} eventAddress={eventAddress} />
         ))}
       </Carousel>
     </div>

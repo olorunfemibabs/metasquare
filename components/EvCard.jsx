@@ -6,7 +6,7 @@ import { useContractRead } from "wagmi";
 import ABI from "../utils/ABI/childContractAbi.json";
 import axios from "axios";
 
-const EventCard = ({ item }) => {
+const EventCard = ({ eventAddress }) => {
   const [eventUri, setEventUri] = useState("");
   const [regStartDateAndTime, setRegStartDateAndTime] = useState(0);
   const [regDeadline, setRegDeadline] = useState(0);
@@ -14,7 +14,7 @@ const EventCard = ({ item }) => {
   const [detail, setDetail] = useState({});
 
   const { data, isLoading, isError } = useContractRead({
-    address: item,
+    address: eventAddress,
     abi: ABI,
     functionName: "eventDetails",
     onSuccess(data) {
@@ -59,7 +59,7 @@ const EventCard = ({ item }) => {
   console.log(imageUrl);
 
   return (
-    <Link href="hp.com">
+    <Link href={`./events/${eventAddress}`}>
       <div className="relative bg-[#FFFFFF] p-4 rounded-lg shadow-lg w-5/6 h-full flex flex-col items-center justify-center">
         <div className="relative rounded-lg ">
           <img
