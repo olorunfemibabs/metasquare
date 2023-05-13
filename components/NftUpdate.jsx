@@ -92,7 +92,7 @@ const NftUpdate = () => {
 
     if (create && typeof create === "function") {
       try {
-        await create();
+        await create?.();
       } catch (error) {
         console.error("Error calling create function:", error);
         // Handle the error appropriately, such as displaying an error message

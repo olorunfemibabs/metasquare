@@ -19,13 +19,12 @@ const Works = () => (
         How Does <br className="sm:block hidden" /> It Work?
       </h2>
       <p className="font-rubik font-normal text-[#080E26] text-[18px] leading-[30.8px]max-w-[470px] mt-5">
-        We offer health and wellness programs that provide resources and support
-        to help customers achieve their health goals.
+        This platform leverages blockchain technology to transform the traditional ticketing industry. It operates on a peer-to-peer network where event organizers can directly sell tickets to customers, eliminating the need for intermediaries.
+
       </p>
 
       <p className="font-poppins font-normal text-[#080E26] text-[18px] leading-[30.8px] max-w-[470px] mt-5">
-        We offer remote medical consultations through telemedicine services, we
-        use live chat app to converse with our clients.
+         It also reduces ticket scalping, as the platform can enforce fair pricing and prevent excessive reselling.
       </p>
     </div>
   </section>
