@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { CountDownTimer } from "./CountDownTimer";
 
-const EventCard = (props) => {
+const EvCard = (props) => {
   return (
     <div className="relative bg-[#FFFFFF] p-4 rounded-lg shadow-lg w-5/6 h-full flex flex-col items-center justify-center">
       <div className="relative rounded-lg ">
@@ -27,4 +27,4 @@ const EventCard = (props) => {
   );
 };
 
-export default EventCard;
+export default EvCard;
