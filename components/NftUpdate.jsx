@@ -89,7 +89,18 @@ const NftUpdate = () => {
     if (result) {
       toast.success("Event details uploaded 100%...");
     }
-    create();
+
+    if (create && typeof create === "function") {
+      try {
+        await create();
+      } catch (error) {
+        console.error("Error calling create function:", error);
+        // Handle the error appropriately, such as displaying an error message
+        toast.error("Failed to create event");
+      }
+    }
+
+    // create?.();
   };
 
   useEffect(() => {

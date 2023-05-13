@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import EventCard from "@/components/EventCard";
+
 import { useContractRead } from "wagmi";
 import ABI from "../utils/ABI/factoryAbi.json";
 import contractAddr from "../utils/contractAddr";
+import EventCard from "@/components/EventCad";
 
 const events = () => {
   const [events, setEvents ] = useState([]);
