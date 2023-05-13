@@ -3,9 +3,9 @@ import HeroCard from "./HeroCard";
 
 const Hero = () => {
   return (
-    <section className="flex md:flex-row flex-col sm:py-16 py-6">
+    <section className="flex md:flex-row flex-col sm:py-16 py-6 sm-px-16 px-6 gap-16">
       <div className="flex flex-1 items-start justify-center flex-col xl:px-0 sm:px-16 px-6">
-        <h1 className="font-poppins font-semibold sm:text-[50px] text-[42px] text-[#080E26] sm:leading-[75px] leading-[55px] w-full">
+        <h1 className="font-rubik font-semibold sm:text-[50px] text-[42px] text-[#080E26] sm:leading-[75px] leading-[55px] w-full">
           Get Your Tickets Now to the Best Events in Town
         </h1>
         <p className="font-poppins font-normal text-[#666666] text-xl leading-[30.8px] max-w-[470px] mt-5">
