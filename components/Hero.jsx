@@ -1,5 +1,6 @@
 import React from "react";
 import HeroCard from "./HeroCard";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -13,10 +14,14 @@ const Hero = () => {
         </p>
         <div className="flex mt-4 gap-4">
           <div className="bg-[#080E26] text-white flex items-center justify-center rounded-lg w-36 h-12 p-4 shadow-lg cursor-pointer">
-            Explore
+            <Link href='getstarted'>
+            Get started
+            </Link>
           </div>
           <div className="bg-[#FFFFFF] hover:bg-[#212529] border hover:border-none border-[#080E26] text-[#080E26] flex items-center justify-center rounded-lg w-36 h-12 p-4 shadow-lg cursor-pointer hover:text-[#FFFFFF]">
-            Create
+           <Link href='create'>
+           Create
+           </Link>
           </div>
         </div>
       </div>

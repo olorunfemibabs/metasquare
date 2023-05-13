@@ -7,7 +7,7 @@ import {
 import childContractAbi from '../utils/ABI/childContractAbi.json';
 import { toast } from "react-toastify";
 
-const CreateId = () => {
+const Claim = () => {
     const [id, setId ] = useState(0);
     const [eventAdmin, setEventAdmin ] = useState('');
 
@@ -73,4 +73,4 @@ const CreateId = () => {
 
 }
 
-export default CreateId;
+export default Claim;

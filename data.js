@@ -98,8 +98,8 @@ export const footerLinks = [
         link: "https://www.web3bridge.com/",
       },
       {
-        name: "Create",
-        link: "https://www.web3bridge.com/",
+        name: "Admin",
+        link: "./createid",
       },
       {
         name: "Explore",

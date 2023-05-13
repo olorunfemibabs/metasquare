@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { footerLinks, socialMedia } from "../data";
 import Image from "next/image";
 
@@ -29,6 +30,7 @@ const Footer = () => {
               </h4>
               <ul className="list-none mt-4">
                 {footerlink.links.map((link, index) => (
+                  <Link href={link.link}>
                   <li
                     key={link.name}
                     className={`font-poppins font-normal text-[16px] leading-[24px] text-blue-950 
@@ -38,6 +40,7 @@ const Footer = () => {
                   >
                     {link.name}
                   </li>
+                  </Link>
                 ))}
               </ul>
             </div>
