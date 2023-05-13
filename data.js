@@ -65,21 +65,21 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "I am so glad I chose this health insurance company. They have been so helpful in navigating the complex world of healthcare, and their customer service is top-notch.",
+      "Finally, MetaSquare has puts control back in the hands of the users. With decentralized ticketing, I no longer worry about scalpers or fraud. It's a game-changer!",
     name: "Jane Kramer",
-    title: "Mentor & Teacher",
+    title: "Techie CEO",
   },
   {
     id: "feedback-2",
     content:
-      "I never thought I could afford comprehensive health coverage, but this company made it possible. I feel much more secure knowing that I have their support in case of any unexpected medical expenses.",
+      "This decentralized ticketing platform revolutionized my event experience. I could easily buy and sell tickets securely without any intermediaries. Highly recommended!",
     name: "John Wick",
     title: "Senior Engineer",
   },
   {
     id: "feedback-3",
     content:
-      "The Neon team has leveraged their extensive Tech and Finance expertise to develop a sophisticated yet user-friendly insurance product in the DeFi insurance ecosystem. I'm thrilled to witness the fruition of their hard work and dedication!",
+      "I love how MetaSquare ensures fairness by preventing ticket hoarding and price manipulation. It's a win-win for both event-goers and organizers.",
     name: "Ryan Coogler",
     title: "Co-Founder & CTO",
   },
@@ -165,11 +165,11 @@ export const socialMedia = [
   {
     id: "social-media-3",
     icon: "/twitter.svg",
-    link: "https://www.twitter.com/",
+    link: "https://twitter.com/MetaSquare1451",
   },
   {
     id: "social-media-4",
     icon: "/linkedin.svg",
-    link: "https://www.linkedin.com/",
+    link: "https://www.linkedin.com/in/meta-square-48142a276/",
   },
 ];

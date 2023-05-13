@@ -16,8 +16,7 @@ const Testimonials = () => (
       <div className="w-full md:mt-0 mt-6">
         <p className="font-poppins font-normal text-blue-950 text-[18px] leading-[30.8px] max-w-[450px] text-left">
           Join our community of satisfied users today and experience the peace
-          of mind that comes with having comprehensive health insurance
-          coverage.
+          of mind that comes with having Decentralized Ticketing Experience.
         </p>
       </div>
     </div>
