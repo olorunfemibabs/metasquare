@@ -1,7 +1,14 @@
 import React from "react";
+import CreateId from "@/components/CreateId";
 
 const about = () => {
-  return <div>About</div>;
+  return (
+    <div>
+      About
+      < CreateId />
+
+    </div>
+    ) 
 };
 
 export default about;
