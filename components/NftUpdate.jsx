@@ -89,7 +89,7 @@ const NftUpdate = () => {
     if (result) {
       toast.success("Event details uploaded 100%...");
     }
-    create?.();
+    create();
   };
 
   useEffect(() => {
