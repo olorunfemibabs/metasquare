@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { footerLinks, socialMedia } from "../data";
 import Image from "next/image";
 
@@ -14,7 +15,7 @@ const Footer = () => {
             className="object-contain"
           />
           <p className="font-rubik font-normal text-blue-950 text-[18px] leading-[30.8px]mt-4 max-w-[312px]">
-            We give you Delectable Events.
+            Create Unforgettable Memories.
           </p>
         </div>
 
@@ -29,15 +30,17 @@ const Footer = () => {
               </h4>
               <ul className="list-none mt-4">
                 {footerlink.links.map((link, index) => (
-                  <li
-                    key={link.name}
-                    className={`font-poppins font-normal text-[16px] leading-[24px] text-blue-950 
+                  <Link href={link.link} key={link.name}>
+                    <li
+                      key={link.name}
+                      className={`font-poppins font-normal text-[16px] leading-[24px] text-blue-950 
                       hover:text-secondary cursor-pointer ${
                         index !== footerlink.links.length - 1 ? "mb-4" : "mb-0"
                       }`}
-                  >
-                    {link.name}
-                  </li>
+                    >
+                      {link.name}
+                    </li>
+                  </Link>
                 ))}
               </ul>
             </div>
@@ -45,7 +48,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-[100%] flex h-full justify-between items-center md:flex-row flex-col p-6 bg-[#080E26] ">
+      <div className="w-[100%] rounded-xl flex h-full justify-between items-center md:flex-row flex-col p-6 bg-[#080E26] ">
         <p className="font-poppins font-normal text-[18px] text-center text-[#FFFFFF] leading-[27px]">
           Copyright Ⓒ 2023 Metasquare. All Rights Reserved.
         </p>
