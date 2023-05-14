@@ -65,9 +65,9 @@ export const business = [
   {
     id: 1,
     imageurl: "/wallet-2-256.png",
-    name: "Set up your wallet",
+    name: "Register your event",
     description:
-      "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      "Click on the 'Get started' button to submit your event details to the platform.",
   },
   {
     id: 2,
