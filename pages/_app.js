@@ -1,17 +1,21 @@
 import "@/styles/globals.css";
 import "@rainbow-me/rainbowkit/styles.css";
-import { getDefaultWallets, RainbowKitProvider, midnightTheme } from "@rainbow-me/rainbowkit";
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+  midnightTheme,
+} from "@rainbow-me/rainbowkit";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
 import { mainnet, sepolia, bscTestnet, bsc } from "wagmi/chains";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 import { publicProvider } from "wagmi/providers/public";
 import Layout from "@/components/Layout";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 const { chains, provider } = configureChains(
-  [bscTestnet, sepolia],
-  
+  [bscTestnet],
+
   [
     jsonRpcProvider({
       rpc: (chain) => ({
@@ -22,7 +26,6 @@ const { chains, provider } = configureChains(
     }),
   ]
 );
-
 
 const { connectors } = getDefaultWallets({
   appName: "My RainbowKit App",
@@ -38,7 +41,11 @@ const wagmiClient = createClient({
 export default function App({ Component, pageProps }) {
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider modalSize="compact" chains={chains} theme={midnightTheme()}>
+      <RainbowKitProvider
+        modalSize="compact"
+        chains={chains}
+        theme={midnightTheme()}
+      >
         <Layout provider={provider}>
           <Component {...pageProps} />
           <ToastContainer />
