@@ -4,10 +4,6 @@ import ABI from "../utils/ABI/factoryAbi.json";
 import contractAddr from "../utils/contractAddr";
 import EventCard from "@/components/EventCad";
 
-import EventCard from "@/components/EvCard";
-
-import EventCard from "@/components/EvCard";
-
 const events = () => {
   const [events, setEvents] = useState([]);
   const [visible, setVisible] = useState(6);
