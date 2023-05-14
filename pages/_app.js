@@ -10,7 +10,7 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 const { chains, provider } = configureChains(
-  [mainnet, sepolia],
+  [mainnet, sepolia, bscTestnet],
   
   [
     jsonRpcProvider({
