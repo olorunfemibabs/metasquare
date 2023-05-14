@@ -20,7 +20,7 @@ const Hero = () => {
           </div>
           <div className="bg-[#FFFFFF] hover:bg-[#212529] border hover:border-none border-[#080E26] text-[#080E26] flex items-center justify-center rounded-lg w-36 h-12 p-4 shadow-lg cursor-pointer hover:text-[#FFFFFF]">
            <Link href='create'>
-           Create
+           Create event
            </Link>
           </div>
         </div>
