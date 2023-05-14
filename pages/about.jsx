@@ -52,16 +52,16 @@ const about = () => {
             <p className="mb-4">
               Metasquare empowers both event organizers and attendees with a
               secure, transparent, and immersive experience. By harnessing the
-              power of web3 and NFTs, we're reshaping the way events are
+              power of web3 and NFTs, we are reshaping the way events are
               organized and tickets are distributed. Join us on this
               groundbreaking journey and witness the future of event management
               unfold.{" "}
             </p>
 
             <p className="mb-4">
-              Don't miss out on the Metasquare revolution. Embrace the power of
+              Do not miss out on the Metasquare revolution. Embrace the power of
               blockchain, NFTs, and web3 technologies to create unforgettable
-              experiences. Whether you're an event organizer or an avid
+              experiences. Whether you are an event organizer or an avid
               attendee, Metasquare is your gateway to a new era of event
               management.
             </p>
