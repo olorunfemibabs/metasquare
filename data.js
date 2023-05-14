@@ -61,6 +61,37 @@ export const eventData = [
   },
 ];
 
+export const business = [
+  {
+    id: 1,
+    imageurl: "/wallet-2-256.png",
+    name: "Set up your wallet",
+    description:
+      "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+  },
+  {
+    id: 2,
+    imageurl: "/filled-box-256.png",
+    name: "Create your event",
+    description:
+      "Persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+  },
+  {
+    id: 3,
+    imageurl: "/stack-of-photos-256.png",
+    name: "Add your ticket NFTs",
+    description:
+      "Essent lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+  },
+  {
+    id: 4,
+    imageurl: "/tag-5-256.png",
+    name: "List ticket for sale",
+    description:
+      "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+  },
+];
+
 export const feedback = [
   {
     id: "feedback-1",

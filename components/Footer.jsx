@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-[100%] flex h-full justify-between items-center md:flex-row flex-col p-6 bg-[#080E26] ">
+      <div className="w-[100%] rounded-xl flex h-full justify-between items-center md:flex-row flex-col p-6 bg-[#080E26] ">
         <p className="font-poppins font-normal text-[18px] text-center text-[#FFFFFF] leading-[27px]">
           Copyright Ⓒ 2023 Metasquare. All Rights Reserved.
         </p>
