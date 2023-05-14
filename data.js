@@ -107,7 +107,7 @@ export const footerLinks = [
       },
       {
         name: "Terms & Services",
-        link: "https://www.web3bridge.com/",
+        link: "https://www.freeprivacypolicy.com/live/f54d2dae-dbf0-4450-9f2a-260c5e554212",
       },
     ],
   },
@@ -155,12 +155,12 @@ export const socialMedia = [
   {
     id: "social-media-1",
     icon: "/instagram.svg",
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/metasquare3/",
   },
   {
     id: "social-media-2",
     icon: "/facebook.svg",
-    link: "https://www.facebook.com/",
+    link: "https://https://web.facebook.com/profile.php?id=100092571884723/",
   },
   {
     id: "social-media-3",

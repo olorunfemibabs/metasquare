@@ -42,7 +42,7 @@ const Developer = () => {
                     Twitter
                   </a>
                   <a
-                    href="https://www.Facebook.com/stanley-dera/"
+                    href="https://www.Facebook.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center bg-white hover:text-blue-100  hover:bg-blue-700 text-[blue] font-bold py-2 px-3 rounded"
@@ -60,7 +60,7 @@ const Developer = () => {
                 <h2 className="text-xl font-semibold mb-2">Onwuatu Stanley Chidera</h2>
                 <p>Email: playsanchi8@gmail.com</p>
                 <p>Location: Abuja, Nigeria</p>
-                <p>Title: Blockchain Developer</p>
+                <p>Title: Blockchain Forensics Engineer and smart contract developer</p>
               </div>
             </div>
              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
@@ -72,7 +72,7 @@ const Developer = () => {
                 />
                 <div className="mt-4 flex space-x-4">
                   <a
-                    href="https://www.linkedin.com/in/stanley-dera-137025235/"
+                    href="https://www.linkedin.com/in/jeremiah-oyeniran-9b1587205/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center bg-white hover:text-blue-100  hover:bg-blue-700 text-[blue] font-bold py-2 px-3 rounded"
@@ -85,7 +85,7 @@ const Developer = () => {
                     LinkedIn
                   </a>
                   <a
-                    href="https://www.twitter.com/stanley-dera/"
+                    href="https://www.twitter.com/jery91512303/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center bg-white hover:text-blue-100  hover:bg-blue-700 text-[blue] font-bold py-2 px-3 rounded"
@@ -98,7 +98,7 @@ const Developer = () => {
                     Twitter
                   </a>
                   <a
-                    href="https://www.Facebook.com/stanley-dera/"
+                    href="https://web.facebook.com/jeremiah.o.damilare.7/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center bg-white hover:text-blue-100  hover:bg-blue-700 text-[blue] font-bold py-2 px-3 rounded"
@@ -154,7 +154,7 @@ const Developer = () => {
                     Twitter
                   </a>
                   <a
-                    href="https://www.Facebook.com/stanley-dera/"
+                    href="https://www.Facebook.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center bg-white hover:text-blue-100  hover:bg-blue-700 text-[blue] font-bold py-2 px-3 rounded"
@@ -172,6 +172,62 @@ const Developer = () => {
                 <h2 className="text-xl font-semibold mb-2">Okoli Evans</h2>
                 <p>Email: evansdegreat@gmail.com</p>
                 <p>Location: Anambara, Nigeria</p>
+                <p>Title: Blockchain Developer</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+              <div>
+                <img
+                  className="w-full h-auto rounded-lg"
+                  src="/roqbell.jpeg"
+                  alt="Developer Avatar"
+                />
+                <div className="mt-4 flex space-x-4">
+                  <a
+                    href="https://www.linkedin.com/in/roqbell/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center bg-white hover:text-blue-100  hover:bg-blue-700 text-[blue] font-bold py-2 px-3 rounded"
+                  >
+                    <img
+                      src="/linkedin.svg"
+                      alt="LinkedIn Icon"
+                      className="w-4 h-4 mr-2 bg-blue-800"
+                    />
+                    LinkedIn
+                  </a>
+                  <a
+                    href="https://www.twitter.com/the_roqbell/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center bg-white hover:text-blue-100  hover:bg-blue-700 text-[blue] font-bold py-2 px-3 rounded"
+                  >
+                    <img
+                      src="/twitter.png"
+                      alt="Twitter Icon"
+                      className="w-4 h-4 mr-2"
+                    />
+                    Twitter
+                  </a>
+                  <a
+                    href="https://www.Facebook.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center bg-white hover:text-blue-100  hover:bg-blue-700 text-[blue] font-bold py-2 px-3 rounded"
+                  >
+                    <img
+                      src="/facebook.svg"
+                      alt="Facebook Icon"
+                      className="w-4 h-4 mr-2 bg-blue-800"
+                    />
+                    Facebook
+                  </a>
+                </div>
+              </div>
+              <div>
+                <h2 className="text-xl font-semibold mb-2">Roqeeb Bello</h2>
+                <p>Email: roqbell@gmail.com </p>
+                <p>Location: Abeokuta, Nigeria</p>
                 <p>Title: Blockchain Developer</p>
               </div>
             </div>
