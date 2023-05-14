@@ -12,7 +12,8 @@ const Navbar = () => {
     { name: "Home", address: "/" },
     { name: "Events", address: "/events" },
     { name: "About", address: "/about" },
-    { name: "Docs", address: "https://dads-organization.gitbook.io/untitled/" },
+    { name: "Docs", address: "/docs" },
+    // { name: "Docs", address: "https://dads-organization.gitbook.io/untitled/" },
     // { name: "Developer", address: "/developer" },
   ];
 
