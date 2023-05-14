@@ -61,7 +61,7 @@ const Register = () => {
                   : 'Register'}
               </button> */}
 
-              <button className="py-2 mt-4 w-full hover:bg-blue-900 text-white font-semibold" type="submit">
+              <button className="py-2 mt-4 w-full hover:bg-blue-900 text-blue-900 hover:text-white font-semibold rounded" type="submit">
                 {'Register'}
               </button>
             </form>
