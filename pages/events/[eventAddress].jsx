@@ -123,6 +123,13 @@ const eventDetail = () => {
             Claim
           </button>
         </div>
+        <div>
+        <Link href={`/attendees/${eventFlex}`}>
+            <button className="bg-[#080E26] text-white flex items-center justify-center rounded-lg w-36 h-12 p-4 shadow-lg cursor-pointer mt-3">
+              Set Attendees
+            </button>
+          </Link>
+        </div>
       </div>
     </section>
   );

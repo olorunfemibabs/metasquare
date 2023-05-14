@@ -9,17 +9,16 @@ import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 
 const SetAttendees = () => {
-    const router = useRouter();
-    const attendeeRouter = router.query.setAttendees
-    console.log(attendeeRouter);
-    const [participants, setParticipants] = useState([]);
+  const router = useRouter();
+  const attendeeRouter = router.query.setAttendees;
+  console.log(attendeeRouter);
+  const [participants, setParticipants] = useState([]);
 
-    
   const { config: config1 } = usePrepareContractWrite({
     address: attendeeRouter,
     abi: ABI,
     functionName: "setAttenders",
-    args: [participants],
+    args: [[participants]],
   });
 
   const {
@@ -37,10 +36,10 @@ const SetAttendees = () => {
     hash: setAttendeeData?.hash,
 
     onSuccess: () => {
-      toast.success('Event Attendees set successfully');
+      toast.success("Event Attendees set successfully");
     },
 
-    onError:(error) => {
+    onError: (error) => {
       toast.error("Encountered error: ", error);
     },
   });
@@ -48,11 +47,11 @@ const SetAttendees = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if ( participants === '' ) {
-        toast.error("participant field required");
-      } else {
-        setAttendee?.();
-      }
+    if (participants === "") {
+      toast.error("participant field required");
+    } else {
+      setAttendee?.();
+    }
   };
 
   useEffect(() => {
@@ -61,32 +60,34 @@ const SetAttendees = () => {
     }
 
     if (isSuccess) {
-     setParticipants([]);
+      setParticipants([]);
     }
   }, [isError, isSuccess]);
 
   return (
     <div className="flex justify-center items-center w-full">
-    <form onSubmit={handleSubmit} className="">
-    <label className="text-lg ">
-        Participants: <br />
-    </label>
-    <input
-      className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
-      type="text"
-      placeholder="Participants addresses separated by comma"
-      onChange={(e) => setParticipants(e.target.value)}
-    />
+      <form onSubmit={handleSubmit} className="">
+        <label className="text-lg ">
+          Participants: <br />
+        </label>
+        <input
+          className="py-2 px-2 border border-blue-950 rounded-lg w-full mb-2"
+          type="text"
+          placeholder="Participants addresses separated by comma"
+          onChange={(e) => setParticipants(e.target.value)}
+        />
 
-<button className="py-2 mt-4 w-full bg-blue-950 text-white font-semibold rounded-lg" type="submit">
-                {setAttendeeIsLoading || setAttendeeWaitIsLoading
-                  ? 'Setting attenders...'
-                  : 'Set attenders'}
-              </button>
-            </form>
+        <button
+          className="py-2 mt-4 w-full bg-blue-950 text-white font-semibold rounded-lg"
+          type="submit"
+        >
+          {setAttendeeIsLoading || setAttendeeWaitIsLoading
+            ? "Setting attenders..."
+            : "Set attendees"}
+        </button>
+      </form>
     </div>
-  )
-
-}
+  );
+};
 
 export default SetAttendees;
