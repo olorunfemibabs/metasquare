@@ -1,5 +1,7 @@
 import { feedback } from "@/data";
 import FeedbackCard from "./FeedbackCard";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const Testimonials = () => (
   <section

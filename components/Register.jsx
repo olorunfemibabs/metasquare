@@ -6,38 +6,29 @@ import {
 } from "wagmi";
 import childContractAbi from '../utils/ABI/childContractAbi.json';
 import { toast } from "react-toastify";
+import { useRouter } from "next/router";
+import { ethers } from "ethers";
 
 const Register = ({ eventAddress }) => {
     const [amount, setAmount ] = useState('');
 
-    const { config: config1 } = usePrepareContractWrite({
-        address: eventAddress,
+    const router = useRouter();
+    const registerRouter = router.query.register
+
+      const { write } = useContractWrite({
+        address: registerRouter,
         abi: childContractAbi,
-        functionName: "register",
-    });
-
-    const {
-        data: registerData,
-        isLoading: registerIsLoading,
-        write: register,
-    } = useContractWrite(config1);
-
-    const {
-        data: registerWaitData,
-        isLoading: registerWaitIsLoading,
-        isError,
-        isSuccess,
-    } = useWaitForTransaction({
-        hash: registerData?.hash,
-
-        onSuccess: () => {
-            toast.success('Registration successfully');
+        functionName: 'register',
+        args: [ ((amount * 1e18).toString()) ],
+        overrides: {
+          value: ((amount * 1e18).toString())
         },
+        onSuccess(data) {
+          toast.success('Registration successful');
+        }
+      })
 
-        onError: (error) => {
-            toast.error('Encountered error: ', error);
-        },
-    });
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -45,16 +36,17 @@ const Register = ({ eventAddress }) => {
         if(amount === ''){
             toast.error('all fields required');
         } else {
-            register();
+            write?.();
         }
     }
 
-    useEffect(() => {
-        if(isError) {
-            toast.error('Transaction error, try again');
-        }
+    // useEffect(() => {
+    //     if(isError) {
+    //         toast.error('Transaction error, try again');
+    //     }
 
-    }, [isError]);
+
+    // }, [isError]);
 
     return (
         <div className="flex justify-center items-center">
@@ -67,13 +59,18 @@ const Register = ({ eventAddress }) => {
           type="text"
           placeholder="Enter zero if event is free"
           onChange={(e) =>
-            setAmount(parseFloat(e.target.value * 1e18).toString(10))
+            setAmount(e.target.value )
+            // setAmount(parseFloat(e.target.value * 10e18).toString(10))
           }
         />
-              <button className="py-2 mt-4 w-full hover:bg-blue-900 text-white font-semibold" type="submit">
+              {/* <button className="py-2 mt-4 w-full hover:bg-blue-900 text-white font-semibold" type="submit">
                 {registerIsLoading || registerWaitIsLoading
                   ? 'Registering...'
                   : 'Register'}
+              </button> */}
+
+              <button className="py-2 mt-4 w-full hover:bg-blue-900 text-white font-semibold" type="submit">
+                {'Register'}
               </button>
             </form>
 
@@ -83,3 +80,4 @@ const Register = ({ eventAddress }) => {
 }
 
 export default Register;
+
