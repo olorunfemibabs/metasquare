@@ -24,7 +24,12 @@ const Business = () => {
               className={`w-2/3 md:p-4 p-0 mb-8 ${bus.id == 1 ? "mt-8" : ""}`}
             >
               <div className="mb-2">
-                <Image src={bus.imageurl} width={40} height={40} />
+                <Image
+                  src={bus.imageurl}
+                  alt="business"
+                  width={40}
+                  height={40}
+                />
               </div>
               <div className="">
                 <h2 className="font-semibold text-[#080E26] text-xl mb-2">
