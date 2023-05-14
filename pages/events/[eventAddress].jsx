@@ -15,7 +15,7 @@ import Register from "@/components/Register";
 // import childContractAbi from '../utils/ABI/childContractAbi.json';
 import { toast } from "react-toastify";
 
-const eventDetail = () => {
+const EventDetail = () => {
   const router = useRouter();
   const eventFlex = router.query.eventAddress;
 
@@ -36,18 +36,18 @@ const eventDetail = () => {
   const { write } = useContractWrite({
     address: eventFlex,
     abi: ABI,
-    functionName: 'claimAttendanceToken',
-   
+    functionName: "claimAttendanceToken",
+
     onSuccess(data) {
-      toast.success('Attendance Certificate claim successful');
-    }
-  })
+      toast.success("Attendance Certificate claim successful");
+    },
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     write?.();
-}
+  };
 
   const handleEventData = (data) => {
     setEventUri(`https://ipfs.io/ipfs/${data.eventUri}/metadata.json`);
@@ -124,7 +124,7 @@ const eventDetail = () => {
           </button>
         </div>
         <div>
-        <Link href={`/attendees/${eventFlex}`}>
+          <Link href={`/attendees/${eventFlex}`}>
             <button className="bg-[#080E26] text-white flex items-center justify-center rounded-lg w-36 h-12 p-4 shadow-lg cursor-pointer mt-3">
               Set Attendees
             </button>
@@ -135,4 +135,4 @@ const eventDetail = () => {
   );
 };
 
-export default eventDetail;
+export default EventDetail;

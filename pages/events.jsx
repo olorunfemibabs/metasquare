@@ -5,7 +5,7 @@ import contractAddr from "../utils/contractAddr";
 
 import EventCard from "@/components/EvCard";
 
-const events = () => {
+const Events = () => {
   const [events, setEvents] = useState([]);
   const [visible, setVisible] = useState(6);
 
@@ -46,4 +46,4 @@ const events = () => {
   );
 };
 
-export default events;
+export default Events;
