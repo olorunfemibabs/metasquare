@@ -53,7 +53,7 @@ const eventDetail = () => {
 
   return (
     <section className="flex md:flex-row flex-col sm:py-16 py-6">
-      <div className="flex-1 flex md:items-start items-center justify-center md:my-0 my-10 w-4/6 h-full rounded-lg relative">
+      <div className="flex-1 flex items-center justify-center mx-14 md:mx-0 md:my-0 my-10 w-4/6 h-full rounded-lg relative">
         <img
           src={imageUrl}
           alt="ticket"
@@ -94,6 +94,14 @@ const eventDetail = () => {
             Register
           </button>
         </Link>
+        <div className="flex flex-row items-center justify-center gap-4">
+          <div className="bg-[#080E26] text-white flex items-center justify-center rounded-lg w-36 h-12 p-4 shadow-lg cursor-pointer mt-3">
+            Register
+          </div>
+          <div className="bg-[#FFFFFF] hover:bg-[#212529] border hover:border-none border-[#080E26] text-[#080E26] flex items-center justify-center rounded-lg w-36 h-12 p-4 shadow-lg cursor-pointer hover:text-[#FFFFFF] mt-3">
+            Claim
+          </div>
+        </div>
       </div>
     </section>
   );
