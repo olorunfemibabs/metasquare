@@ -23,13 +23,15 @@ const Navbar = () => {
   return (
     <div className="w-screen bg-[#FFFFFF] fixed top-0 left-0 z-30 p-4">
       <div className="md:flex items-center justify-between text-[#666666] text-sm font-medium">
-        <Image
-          src="/meta.png"
-          alt="metasquare"
-          width={124}
-          height={40}
-          className="object-contain"
-        />
+        <Link href="/">
+          <Image
+            src="/meta.png"
+            alt="metasquare"
+            width={150}
+            height={58}
+            className="object-contain"
+          />
+        </Link>
         <div
           onClick={() => setOpen(!open)}
           className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"

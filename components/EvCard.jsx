@@ -7,7 +7,6 @@ import axios from "axios";
 
 const EventCard = ({ eventAddress }) => {
   const [eventUri, setEventUri] = useState("");
-  const [regStartDateAndTime, setRegStartDateAndTime] = useState(0);
   const [regDeadline, setRegDeadline] = useState(0);
   const [fee, setFee] = useState(0);
   const [detail, setDetail] = useState({});
@@ -23,11 +22,14 @@ const EventCard = ({ eventAddress }) => {
   });
 
   const handleEventData = (data) => {
+    const mainEvent =
+      data.eventUri.length == 59
+        ? `${data.eventUri}`
+        : `bafyreib2rkokdxhwczaz7gepaczq4y7znkxrddeqhvdevoxkilwszajjiy`;
+    console.log("check", data.eventUri.length);
+    // console.log("check", `https://ipfs.io/ipfs/${data.eventUri}/metadata.json`);
     setEventUri(`https://ipfs.io/ipfs/${data.eventUri}/metadata.json`);
-    fetchDetail(`https://ipfs.io/ipfs/${data.eventUri}/metadata.json`);
-    setRegStartDateAndTime(
-      convertEpochToReadableTime(Number(data.regStartDateAndTime))
-    );
+    fetchDetail(`https://ipfs.io/ipfs/${mainEvent}/metadata.json`);
     setRegDeadline(data.regDeadline);
     setFee(Number(data.eventFee) / 1e18);
   };
@@ -41,21 +43,8 @@ const EventCard = ({ eventAddress }) => {
     await axios.get(data, config).then((res) => setDetail(res.data));
   }
 
-  function convertEpochToReadableTime(epochTime) {
-    const date = new Date(epochTime * 1000); // Convert to milliseconds
-    const year = date.getFullYear();
-    const month = ("0" + (date.getMonth() + 1)).slice(-2);
-    const day = ("0" + date.getDate()).slice(-2);
-    const hours = ("0" + date.getHours()).slice(-2);
-    const minutes = ("0" + date.getMinutes()).slice(-2);
-    const seconds = ("0" + date.getSeconds()).slice(-2);
-
-    const formattedTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-    return formattedTime;
-  }
-
   let imageUrl = `https://ipfs.io/ipfs/${detail.image?.slice(7)}`;
-  console.log(imageUrl);
+  //console.log(imageUrl);
 
   return (
     <Link href={`./events/${eventAddress}`}>

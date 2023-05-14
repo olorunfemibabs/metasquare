@@ -30,16 +30,16 @@ const Footer = () => {
               </h4>
               <ul className="list-none mt-4">
                 {footerlink.links.map((link, index) => (
-                  <Link href={link.link}>
-                  <li
-                    key={link.name}
-                    className={`font-poppins font-normal text-[16px] leading-[24px] text-blue-950 
+                  <Link href={link.link} key={link.name}>
+                    <li
+                      key={link.name}
+                      className={`font-poppins font-normal text-[16px] leading-[24px] text-blue-950 
                       hover:text-secondary cursor-pointer ${
                         index !== footerlink.links.length - 1 ? "mb-4" : "mb-0"
                       }`}
-                  >
-                    {link.name}
-                  </li>
+                    >
+                      {link.name}
+                    </li>
                   </Link>
                 ))}
               </ul>
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-[100%] flex h-full justify-between items-center md:flex-row flex-col p-6 bg-[#080E26] ">
+      <div className="w-[100%] rounded-xl flex h-full justify-between items-center md:flex-row flex-col p-6 bg-[#080E26] ">
         <p className="font-poppins font-normal text-[18px] text-center text-[#FFFFFF] leading-[27px]">
           Copyright Ⓒ 2023 Metasquare. All Rights Reserved.
         </p>
