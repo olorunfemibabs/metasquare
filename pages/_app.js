@@ -10,14 +10,14 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 const { chains, provider } = configureChains(
-  [mainnet, sepolia, bscTestnet],
+  [bscTestnet, sepolia],
   
   [
     jsonRpcProvider({
       rpc: (chain) => ({
         // http: `https://eth-sepolia.g.alchemy.com/v2/5ShvcS43c_Wrsfk_jTMZOU0sXXBKaVXP`,
-        http: `https://eth-sepolia.g.alchemy.com/v2/qOB4YAZmOLO8b79gMjCzo5vunM0HyDvE`,
-        WebSocket: `wss://eth-sepolia.g.alchemy.com/v2/qOB4YAZmOLO8b79gMjCzo5vunM0HyDvE`,
+        http: `https://data-seed-prebsc-1-s1.binance.org:8545`,
+        WebSocket: `wss://data-seed-prebsc-1-s1.binance.org:8545`,
       }),
     }),
   ]
