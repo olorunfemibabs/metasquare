@@ -15,7 +15,7 @@ const Footer = () => {
             className="object-contain"
           />
           <p className="font-rubik font-normal text-blue-950 text-[18px] leading-[30.8px]mt-4 max-w-[312px]">
-            We give you Delectable Events.
+            Create Unforgettable Memories.
           </p>
         </div>
 
