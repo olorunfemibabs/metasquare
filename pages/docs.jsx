@@ -12,7 +12,7 @@ const docs = () => {
       decentralized and transparent system where event organizers, artists and the audience can create <br />
       memorable events, and build even closer connection towards their audience or fans. <br /><br />
 
-      To get started checkout our documentation <Link href='gitbook.com'><span className="font-semibold text-blue-800 text-lg"> here</span> </Link>
+      To get started checkout our documentation <Link href='https://dads-organization.gitbook.io/untitled/'><span className="font-semibold text-blue-800 text-lg"> here</span> </Link>
 
 
     </p>
