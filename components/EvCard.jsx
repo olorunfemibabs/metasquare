@@ -62,7 +62,7 @@ const EventCard = ({ eventAddress }) => {
         </div>
         <div className="w-full h-full text-blue-950 text-lg font-semibold pl-3">
           <h2 className="relative my-2 text-lg">{detail.name}</h2>
-          <p className=" text-sm">{fee} ETH</p>
+          <p className=" text-sm">{fee} BNB</p>
           <p className="font-semibold text-[#080E26] text-sm">
             {detail.description}
           </p>
