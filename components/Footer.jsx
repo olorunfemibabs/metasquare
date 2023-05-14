@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <section className="flex justify-center items-center sm:py-16 py-6 flex-col bg-[#FFFFFF] sm:px-16 px-6">
+    <section className="flex justify-center items-center sm:py-16 py-6 flex-col rounded-lg bg-[#FFFFFF] sm:px-16 px-6">
       <div className="flex justify-center items-start md:flex-row flex-col mb-8 w-full">
         <div className="flex flex-1 flex-col justify-start mr-10">
           <Image

@@ -23,9 +23,9 @@ const events = () => {
   };
 
   return (
-    <div className="flex flex-col w-screen">
+    <div className="flex flex-col items-center justify-center w-screen">
       Events
-      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 ml-12">
         {events?.slice(0, visible).map((e, i) => {
           return (
             <div key={i}>
