@@ -107,7 +107,7 @@ const EventDetail = () => {
             Price:
           </p>
           <div className="-mb-4 pl-4 text-[#666666] text-xl font-bold">
-            {fee} ETH
+            {fee} BNB
           </div>
         </div>
         <div className="flex flex-row items-center justify-center gap-4">
