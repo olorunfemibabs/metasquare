@@ -186,12 +186,12 @@ export const socialMedia = [
   {
     id: "social-media-1",
     icon: "/instagram.svg",
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/metasquare3/",
   },
   {
     id: "social-media-2",
     icon: "/facebook.svg",
-    link: "https://www.facebook.com/",
+    link: "https://facebook.com/profile.php?id=100092571884723",
   },
   {
     id: "social-media-3",
