@@ -1,6 +1,6 @@
 # Meta Square NFT Smart Ticketing Dapp
 
-[Visit DAPP](https://meta-square.vercel.app/)
+[Visit DAPP](https://metasquare.vercel.app/)
 
 ![MetaSquare](hp.png)
 
