@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 import { ethers } from "ethers";
 
-const Register = ({ eventAddress }) => {
+const Register = () => {
     const [amount, setAmount ] = useState('');
 
     const router = useRouter();
@@ -60,7 +60,6 @@ const Register = ({ eventAddress }) => {
           placeholder="Enter zero if event is free"
           onChange={(e) =>
             setAmount(e.target.value )
-            // setAmount(parseFloat(e.target.value * 10e18).toString(10))
           }
         />
               {/* <button className="py-2 mt-4 w-full hover:bg-blue-900 text-white font-semibold" type="submit">

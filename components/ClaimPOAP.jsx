@@ -6,10 +6,11 @@ import {
 } from "wagmi";
 import childContractAbi from '../utils/ABI/childContractAbi.json';
 import { toast } from "react-toastify";
+import { useRouter } from "next/router";
 
-const Claim = () => {
-    const [id, setId ] = useState(0);
-    const [eventAdmin, setEventAdmin ] = useState('');
+const ClaimPOAP = () => {
+    const router = useRouter();
+    const claimRouter = router.query.claimpoac
 
     const { config: config1 } = usePrepareContractWrite({
         address: contractAddress,
@@ -73,4 +74,4 @@ const Claim = () => {
 
 }
 
-export default Claim;
+export default ClaimPOAP;
