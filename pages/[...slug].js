@@ -242,40 +242,13 @@ const EventDeets = () => {
         </div>
       </div> */}
 
-      <div class="container">
-        <h1 className={styling.evt}>
-          Event Name: <span className="sp">Polygon Guild Lagos</span>
-          {evtName}
-        </h1>
-        <h1 className={styling.evt}>
-          Organizer:{" "}
-          <span className="sp">0x35064FAcBD34C7cf71C7726E7c9F23e4650eCA10</span>
-          {evtAdmin}
-        </h1>
-        <div className="block">
-          <form onSubmit={handleSubmit}>
-            <button className={styling.submitR} type="submit">
-              {regIsLoading || regIsLoadingWaitData
-                ? "Registering..."
-                : "Register"}
-            </button>
-          </form>
 
-          <form onSubmit={handleSubmit2}>
-            <button className={styling.submitR} type="submit">
-              {claimIsLoading || claimIsLoadingWaitData
-                ? "Claiming Poap..."
-                : "Claim Poap"}
-            </button>
-          </form>
-        </div>
-      </div>
 
       <br></br>
       {address == c ? (
         <div>
           <form onSubmit={onSubmitt}>
-            <h1>Set Event Attenders Addresses below </h1>
+            <h1 className="text-xl font-semibold">Set Event Attenders Addresses below </h1>
             <div class="row">
               <div class="col-25">
                 <label className={styling.label} for="subject">
@@ -301,7 +274,36 @@ const EventDeets = () => {
           </form>
         </div>
       ) : (
-        <></>
+        <>
+                <div class="container">
+        <h1 className={styling.evt}>
+          Event Name: <span className={styling.sp}>Polygon Guild Lagos</span>
+          {evtName}
+        </h1>
+        <h1 className={styling.evt}>
+          Organizer:{" "}
+          <span className={styling.sp}>0x35064FAcBD34C7cf71C7726E7c9F23e4650eCA10</span>
+          {evtAdmin}
+        </h1>
+        <div className="block">
+          <form onSubmit={handleSubmit}>
+            <button className={styling.submitR} type="submit">
+              {regIsLoading || regIsLoadingWaitData
+                ? "Registering..."
+                : "Register"}
+            </button>
+          </form>
+
+          <form onSubmit={handleSubmit2}>
+            <button className={styling.submitR} type="submit">
+              {claimIsLoading || claimIsLoadingWaitData
+                ? "Claiming Poap..."
+                : "Claim Poap"}
+            </button>
+          </form>
+        </div>
+      </div>
+        </>
       )}
 
       <footer />

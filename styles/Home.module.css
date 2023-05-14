@@ -28,11 +28,11 @@
 
 
 .evt {
-    margin: 2rem;
+    margin: 2rem 1rem;
     padding: 2rem 2rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .sp {
@@ -62,7 +62,7 @@
     display: block;
   }
   .submit {
-    background-color: #04AA6D;
+    background-color:#080E26;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -72,7 +72,7 @@
   }
 
   .submitR {
-    background-color: #04AA6D;
+    background-color: #080E26;
     color: white;
     padding: 12px 20px;
     border: none;
