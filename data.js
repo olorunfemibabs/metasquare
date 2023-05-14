@@ -94,7 +94,7 @@ export const footerLinks = [
         link: "./createid",
       },
       {
-        name: "Content",
+        name: "Set Attendees",
         link: "https://www.web3bridge.com/",
       },
       {

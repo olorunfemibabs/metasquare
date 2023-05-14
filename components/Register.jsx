@@ -40,13 +40,6 @@ const Register = () => {
         }
     }
 
-    // useEffect(() => {
-    //     if(isError) {
-    //         toast.error('Transaction error, try again');
-    //     }
-
-
-    // }, [isError]);
 
     return (
         <div className="flex justify-center items-center">

@@ -1,5 +1,4 @@
 import React from "react";
-import CreateEvent from "@/components/CreateEvent";
 import NftUpdate from "@/components/NftUpdate";
 
 
