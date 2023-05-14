@@ -1,15 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { CountDownTimer } from "@/components/CountDownTimer";
 import { useRouter } from "next/router";
-import { useContractRead } from "wagmi";
+import {
+  useContractRead,
+  useContractWrite,
+  usePrepareContractWrite,
+  useWaitForTransaction,
+} from "wagmi";
 import ABI from "../../utils/ABI/childContractAbi.json";
 import axios from "axios";
+import Link from "next/link";
+import Register from "@/components/Register";
+// import childContractAbi from '../utils/ABI/childContractAbi.json';
+import { toast } from "react-toastify";
 
 const eventDetail = () => {
   const router = useRouter();
   const eventFlex = router.query.eventAddress;
-  console.log(eventFlex);
 
   const [eventUri, setEventUri] = useState("");
   const [regDeadline, setRegDeadline] = useState(0);
@@ -24,6 +32,22 @@ const eventDetail = () => {
       handleEventData(data);
     },
   });
+
+  const { write } = useContractWrite({
+    address: eventFlex,
+    abi: ABI,
+    functionName: 'claimAttendanceToken',
+   
+    onSuccess(data) {
+      toast.success('Attendance Certificate claim successful');
+    }
+  })
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    write?.();
+}
 
   const handleEventData = (data) => {
     setEventUri(`https://ipfs.io/ipfs/${data.eventUri}/metadata.json`);
@@ -43,6 +67,10 @@ const eventDetail = () => {
 
   let imageUrl = `https://ipfs.io/ipfs/${detail.image?.slice(7)}`;
   console.log(imageUrl);
+
+  const handleClick = () => {
+    <Register eventAddress={eventFlex} />;
+  };
 
   return (
     <section className="flex md:flex-row flex-col sm:py-16 py-6">
@@ -83,12 +111,24 @@ const eventDetail = () => {
           </div>
         </div>
         <div className="flex flex-row items-center justify-center gap-4">
-          <div className="bg-[#080E26] text-white flex items-center justify-center rounded-lg w-36 h-12 p-4 shadow-lg cursor-pointer mt-3">
-            Register
-          </div>
-          <div className="bg-[#FFFFFF] hover:bg-[#212529] border hover:border-none border-[#080E26] text-[#080E26] flex items-center justify-center rounded-lg w-36 h-12 p-4 shadow-lg cursor-pointer hover:text-[#FFFFFF] mt-3">
+          <Link href={`/register/${eventFlex}`}>
+            <button className="bg-[#080E26] text-white flex items-center justify-center rounded-lg w-36 h-12 p-4 shadow-lg cursor-pointer mt-3">
+              Register
+            </button>
+          </Link>
+          <button
+            onClick={handleSubmit}
+            className="bg-[#FFFFFF] hover:bg-[#212529] border hover:border-none border-[#080E26] text-[#080E26] flex items-center justify-center rounded-lg w-36 h-12 p-4 shadow-lg cursor-pointer hover:text-[#FFFFFF] mt-3"
+          >
             Claim
-          </div>
+          </button>
+        </div>
+        <div>
+        <Link href={`/attendees/${eventFlex}`}>
+            <button className="bg-[#080E26] text-white flex items-center justify-center rounded-lg w-36 h-12 p-4 shadow-lg cursor-pointer mt-3">
+              Set Attendees
+            </button>
+          </Link>
         </div>
       </div>
     </section>

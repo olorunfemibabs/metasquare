@@ -90,15 +90,15 @@ export const footerLinks = [
     title: "Useful Links",
     links: [
       {
-        name: "Content",
+        name: "Admin",
+        link: "./createid",
+      },
+      {
+        name: "Set Attendees",
         link: "https://www.web3bridge.com/",
       },
       {
         name: "How it Works",
-        link: "https://www.web3bridge.com/",
-      },
-      {
-        name: "Create",
         link: "https://www.web3bridge.com/",
       },
       {
