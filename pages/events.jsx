@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useContractRead } from "wagmi";
 import ABI from "../utils/ABI/factoryAbi.json";
 import contractAddr from "../utils/contractAddr";
-import EventCard from "@/components/EventCad";
+
+import EventCard from "@/components/EvCard";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -23,7 +24,7 @@ const Events = () => {
 
   return (
     <div className="flex flex-col items-center justify-center w-screen">
-      Events
+      <h2 className="mb-4 text-2xl font-semibold text-blue-950">Events</h2> 
       <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 ml-12">
         {events?.slice(0, visible).map((e, i) => {
           return (
