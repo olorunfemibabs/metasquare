@@ -10,7 +10,7 @@ const Hero = () => {
           Get Your Tickets Now to the Best Events in Town
         </h1>
         <p className="font-poppins font-normal text-[#666666] text-xl leading-[30.8px] max-w-[470px] mt-5">
-          Join the Crowd and Experience Unforgettable Moments
+          Join the Crowd and Experience Unforgettable Moments; get NFT ticket for event and another NFT as proof of attendance. 
         </p>
         <div className="flex mt-4 gap-4">
           <div className="bg-[#080E26] text-white flex items-center justify-center rounded-lg w-36 h-12 p-4 shadow-lg cursor-pointer">

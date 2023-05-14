@@ -124,8 +124,12 @@ const EventDetail = () => {
           </button>
         </div>
         <div>
+          <div className="mt-5 text-[#666666] font-semibold text-xl">Admin</div>
+          <div>
+            <hr />
+          </div>
           <Link href={`/attendees/${eventFlex}`}>
-            <button className="bg-[#080E26] text-white flex items-center justify-center rounded-lg w-36 h-12 p-4 shadow-lg cursor-pointer mt-3">
+            <button className="bg-[#080E26] text-white flex items-center justify-center rounded-lg w-36 h-12 p-4 shadow-lg cursor-pointer mt-1">
               Set Attendees
             </button>
           </Link>
