@@ -1,5 +1,5 @@
 import React from "react";
-import ReactPlayer from "react-player";
+
 
 const Works = () => (
   <section className="flex-1 flex flex-col sm:flex-row justify-center items-center md:mr-10 mr-0 md:mt-0 mt-10 relative">
