@@ -1,5 +1,7 @@
 import { feedback } from "@/data";
 import FeedbackCard from "./FeedbackCard";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const Testimonials = () => (
   <section
@@ -21,7 +23,7 @@ const Testimonials = () => (
       </div>
     </div>
 
-    <div className="flex flex-wrap sm:justify-start justify-center w-full feedback-container relative z-[1]">
+    <div className="flex flex-nowrap sm:justify-start justify-center w-full feedback-container relative z-[1]">
       {feedback?.map((card) => (
         <FeedbackCard key={card.id} {...card} />
       ))}
