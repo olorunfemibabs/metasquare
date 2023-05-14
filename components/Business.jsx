@@ -9,10 +9,10 @@ const Business = () => {
     <div className=" shadow-lg rounded-2xl relative w-[100%] flex-col justify-center items-center bg-[#FFFFFF] py-12 md:px-16 px-4 mb-12">
       <div className="flex flex-col justify-center items-center w-[100%]">
         <h2 className="font-semibold text-[#080E26] text-4xl mb-5">
-          Create and sell your Event Tickets
+          Create and mint your Event Tickets
         </h2>
         <p className="relative font-light text-blue-950 text-2xl mb-8">
-          Here are easy steps to create and sell your Event Tickets in
+          Here are easy steps to create and mint your Event Tickets on
           Metasquare
         </p>
       </div>

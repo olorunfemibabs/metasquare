@@ -74,21 +74,21 @@ export const business = [
     imageurl: "/filled-box-256.png",
     name: "Create your event",
     description:
-      "Persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      "Click on 'Create event' button, Enter the unique ID generated for you and hit Upload.",
   },
   {
     id: 3,
     imageurl: "/stack-of-photos-256.png",
-    name: "Add your ticket NFTs",
+    name: "Get your ticket NFTs",
     description:
-      "Essent lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      "Click on a particular event, after the event page loads, click on 'Register' button.",
   },
   {
     id: 4,
     imageurl: "/tag-5-256.png",
-    name: "List ticket for sale",
+    name: "Claim attendance ticket",
     description:
-      "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      "On an already registered event, click on 'Claim' button. Note that only users that attended the event can claim.",
   },
 ];
 
