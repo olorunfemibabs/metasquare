@@ -1,9 +1,8 @@
 import React from "react";
-import CreateEvent from "@/components/CreateEvent";
 import NftUpdate from "@/components/NftUpdate";
 
 
-const CreateEvnt = () => {
+const Create = () => {
     return (
         <div className="w-screen">
             <NftUpdate />
@@ -11,4 +10,4 @@ const CreateEvnt = () => {
     )
 }
 
-export default CreateEvnt;
+export default Create;

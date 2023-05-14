@@ -16,7 +16,6 @@ const EventCard = ({eventAddress}) => {
         abi: ABI,
         functionName: "eventDetails",
         onSuccess(data){
-          // console.log(data);
           handleEventData(data);
         }
       });
@@ -53,9 +52,6 @@ const EventCard = ({eventAddress}) => {
         return formattedTime;
       }
 
-
-      
-    // console.log(eventAddress);
     return (
         <div className="flex justify-center items-center">
 
