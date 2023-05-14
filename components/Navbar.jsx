@@ -12,8 +12,8 @@ const Navbar = () => {
     { name: "Home", address: "/" },
     { name: "Events", address: "/events" },
     { name: "About", address: "/about" },
-    { name: "Docs", address: "https://dads-organization.gitbook.io/untitled/" },
-    { name: "Developer", address: "/developer" },
+    { name: "Docs", address: "/docs" },
+    // { name: "Developer", address: "/developer" },
   ];
 
   const router = useRouter();
@@ -45,7 +45,7 @@ const Navbar = () => {
           {Anchors.map((anchor) => (
             <li
               key={anchor.name}
-              className="md:ml-6 text-xl md:my-0 my-7 mb-[10px]"
+              className="md:ml-6 text-lg md:my-0 my-7 mb-[10px]"
             >
               <Link
                 href={anchor.address}

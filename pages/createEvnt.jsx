@@ -6,7 +6,6 @@ import NftUpdate from "@/components/NftUpdate";
 const CreateEvnt = () => {
     return (
         <div className="w-screen">
-            {/* < CreateEvent /> */}
             <NftUpdate />
         </div>
     )

@@ -59,7 +59,7 @@ const EventCard = ({eventAddress}) => {
     return (
         <div className="flex justify-center items-center">
 
-        <Link href='hp.com' className="">
+        <Link href={`./events/${eventAddress}`} className="">
 
             <div className="h-[220px] w-[380px] bg-blue-950 text-white rounded-lg flex flex-col justify-center items-start">
                 <div className="ml-4 mb-2 mr-2"><span className="font-semibold">Event title: </span>{detail.name}</div>
