@@ -1,3 +1,4 @@
+import Head from "next/head";
 import "@/styles/globals.css";
 import "@rainbow-me/rainbowkit/styles.css";
 import {
@@ -46,8 +47,16 @@ export default function App({ Component, pageProps }) {
         chains={chains}
         theme={midnightTheme()}
       >
+        <>
+        <Head>
+          <title>MetaSquare</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/favicon.png" />
+        </Head>
+        </>
         <Layout provider={provider}>
           <Component {...pageProps} />
+          
           <ToastContainer />
         </Layout>
       </RainbowKitProvider>
