@@ -1,0 +1,175 @@
+.regpage {
+    margin: 2rem 2rem;
+    padding: 2rem 15rem;
+    height: 100vh;
+}
+
+.formactions {
+    background-color: whitesmoke;
+    border-radius: 3rem;
+    box-shadow: 0px 16px 11px -4px #c4c4c1b8;
+    
+    
+}
+
+.tt {
+    height: 800px;
+    width: 100%;
+    /* object-fit: cover; */
+    
+}
+
+
+.poap{
+    display: flex;
+}
+
+
+
+
+.evt {
+    margin: 2rem 1rem;
+    padding: 2rem 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.sp {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+
+/*
+=======================
+=====================
+*/
+.input, .textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  .label {
+    padding: 12px 12px 12px 0;
+    display: block;
+  }
+  
+  .block {
+    display: block;
+  }
+  .submit {
+    background-color:#080E26;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+  }
+
+  .submitR {
+    background-color: #080E26;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    margin: 2rem 4.5rem;
+    
+  }
+
+  .submitR:hover {
+    background-color: #45a049;
+  }
+  
+  .submit:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+
+@media screen and (max-width: 780px){
+    .formactions {
+        background-color: whitesmoke;
+        border-radius: 1rem;
+        box-shadow: 0px 16px 11px -4px #c4c4c1b8;
+        padding: 0;
+        
+    }
+
+    .poap{
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .getit {
+        background-color:#44c767;
+        border-radius:13px;
+        border:2px solid #18ab29;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Verdana;
+        font-size:8px;
+        font-weight: 400;
+        padding:10px 13.1px;
+        text-decoration:none;
+        text-shadow:-2px 0px 11px #2f6627;
+    }
+    .getit:hover {
+        background-color:#163804;
+        border:2px solid #163804;
+    }
+    
+    .evt {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 200;
+    }
+    
+    .tt {
+        height: 200px;
+        width: 100%;
+        /* object-fit: cover; */
+        
+    }
+    .regpage {
+        /* margin: 2rem 2rem; */
+        /* padding: 2rem 8rem; */
+        height: 100vh;
+    }
+
+
+    
+}
